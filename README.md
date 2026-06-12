@@ -43,6 +43,16 @@ fake-news-detector/
 └── README.md
 ```
 
+## 📥 Установка проекта
+
+Склонируйте репозиторий:
+
+```bash
+git clone https://github.com/ArseniyKutvitskiy/fake-news-detector
+
+cd fake-news-detector2
+```
+
 ## ⚙️ Установка Backend
 
 ```bash
@@ -60,7 +70,7 @@ pip install -r requirements.txt
 Создайте файл `.env`:
 
 ```env
-DATABASE_URL=postgresql://neondb_owner:npg_FS2lMszVkZW5@ep-floral-bonus-ajesitho.c-3.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+DATABASE_URL= сюда пихаем ссылку на бд
 ```
 
 ## ▶️ Запуск Backend
