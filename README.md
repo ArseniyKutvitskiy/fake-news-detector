@@ -60,7 +60,7 @@ pip install -r requirements.txt
 Создайте файл `.env`:
 
 ```env
-DATABASE_URL=postgresql://USERNAME:PASSWORD@HOST/DATABASE?sslmode=require
+DATABASE_URL=postgresql://neondb_owner:npg_FS2lMszVkZW5@ep-floral-bonus-ajesitho.c-3.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
 ```
 
 ## ▶️ Запуск Backend
