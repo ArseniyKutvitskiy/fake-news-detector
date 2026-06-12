@@ -1,21 +1,125 @@
-# AI Fake News Detector 🕵️‍♂️📰
+# 🕵️‍♂️ AI Fake News Detector
 
-Fullstack-приложение для автоматического определения достоверности новостных статей с использованием искусственного интеллекта (модели RoBERTa) и сохранением истории в облачную базу данных.
+## 📖 Описание проекта
 
-## Архитектура проекта
-* **Frontend:** React + Vite (интерфейс ввода, история проверок, графики статистики)
-* **Backend:** FastAPI (обработка запросов, интеграция с ИИ-моделью, связь с БД)
-* **AI Модель:** RoBERTa (классификатор текста от Hugging Face, развернутый локально)
-* **База данных:** PostgreSQL (облачная СУБД Neon.tech)
+AI Fake News Detector — интеллектуальное веб-приложение для автоматического определения достоверности новостных статей с использованием модели искусственного интеллекта RoBERTa.
+
+## 🚀 Основные возможности
+
+- Анализ новостных текстов с помощью ИИ
+- Определение вероятности фейка
+- Сохранение результатов в PostgreSQL
+- История всех проверок
+- Статистика использования
+- Современный интерфейс на React
+- REST API на FastAPI
 
 ---
 
-## Инструкция по запуску проекта
+## 🏗 Архитектура проекта
 
-### 1. Настройка Бэкенда (Backend)
-Перейдите в папку бэкенда, создайте виртуальное окружение и установите зависимости:
+```text
+React (Frontend)
+      ↓
+FastAPI (Backend)
+      ↓
+RoBERTa AI + PostgreSQL
+```
+
+## 📂 Структура проекта
+
+```text
+fake-news-detector/
+│
+├── backend/
+│   ├── app/
+│   ├── requirements.txt
+│   └── .env
+│
+├── frontend/
+│   ├── src/
+│   └── package.json
+│
+└── README.md
+```
+
+## ⚙️ Установка Backend
+
 ```bash
 cd backend
+
 python -m venv venv
-./venv/Scripts/activate
+
+.\venv\Scripts\activate
+
 pip install -r requirements.txt
+```
+
+## 🗄 Настройка БД
+
+Создайте файл `.env`:
+
+```env
+DATABASE_URL=postgresql://USERNAME:PASSWORD@HOST/DATABASE?sslmode=require
+```
+
+## ▶️ Запуск Backend
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Swagger:
+
+```text
+http://localhost:8000/docs
+```
+
+## 🎨 Запуск Frontend
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Frontend:
+
+```text
+http://localhost:5173
+```
+
+## 🤖 Используемая AI-модель
+
+RoBERTa используется для бинарной классификации новостей:
+
+- REAL NEWS
+- FAKE NEWS
+
+Пример ответа:
+
+```json
+{
+  "prediction": "FAKE",
+  "confidence": 0.94
+}
+```
+
+## 🎓 Университетский проект
+
+Проект демонстрирует навыки:
+
+- Full Stack Development
+- FastAPI
+- React
+- PostgreSQL
+- Machine Learning
+- Artificial Intelligence
+
+## 👨‍💻 Автор
+
+Arseniy Kom1k
+
+2026
